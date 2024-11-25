@@ -6,7 +6,7 @@ public class TestAnagram {
         testIsAnagram();
         testPreProcess();
         testRandomAnagram();
-        
+        System.out.println("yair");
         System.out.println("\nTotal tests: " + totalTests);
         System.out.println("Passed tests: " + passedTests);
         System.out.println("Success rate: " + (passedTests * 100.0 / totalTests) + "%");
