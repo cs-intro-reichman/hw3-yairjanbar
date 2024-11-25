@@ -28,6 +28,9 @@ public class Anagram {
 
 	// Returns true if the two given strings are anagrams, false otherwise.
 	public static boolean isAnagram(String str1, String str2) {
+		if(str1==""&&str2==""){
+			return true;
+		}
 		String newS1=preProcess(str1);
 		String newS2=preProcess(str2);
 		boolean check=false;
