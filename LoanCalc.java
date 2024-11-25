@@ -60,20 +60,21 @@ public class LoanCalc {
 		// So, let’s assume that L and H were set to such initial values.
 		// Set g to (L + H)/2
 		double H =loan;
-		double L=0;
-		double g=(L+H)/2;
+		double L=loan/n;
+		double g=(L+H)/2.0;
+		iterationCounter=0;
 		while ((H-L) > epsilon) {
 			// Sets L and H for the next iteration
 			if (endBalance(loan, rate, n, g)*endBalance(loan, rate, n, H) > 0) {
 			// the solution must be between g and H
 			// so set L or H accordingly
-			H=g;
+				H=g;
 			}
 			else {
 			// the solution must be between L and g
 			// so set L or H accordingly
 			// Computes the mid-value (g) for the next iteration
-			L=g;
+				L=g;
 			}
 			g=(L+H)/2;
 			iterationCounter++;
