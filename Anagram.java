@@ -54,7 +54,7 @@ public class Anagram {
 		String finalString= "";
 		for (int i=0;i<l;i++) {
 			char c=newString.charAt(i);
-			if((c>='a')&&(c<='z')) {
+			if((c>='a')&&(c<='z')||(c>='1')&&(c<='9')) {
 				finalString = finalString + String.valueOf(c);
 			}
 		}
